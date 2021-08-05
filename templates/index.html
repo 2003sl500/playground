@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PlayGround</title>
+		<style>
+			h1 {
+				background-color: rgb(94, 5, 9);
+				color: whitesmoke;
+				text-align: center;
+			}
+
+			#parentBox {
+				display: flex;
+				flex-wrap: wrap;
+				width: auto;
+				justify-content: space-evenly;
+				margin-top: 70px;
+			}
+
+			.boxes {
+				width: 130px;
+				height: 130px;
+				background-color: {{color}};
+				margin: 10px;
+				border: 10px ridge {{shadowcolor}};
+				box-shadow: 7px 7px 10px {{shadowcolor}};
+			}
+		</style>
+	</head>
+	<body>
+		<h1>The Playground</h1>
+		<div id="parentBox">
+			{% for x in range(0, times): %}
+			<div class="boxes"></div>
+			{% endfor %}
+		</div>
+	</body>
+</html>
